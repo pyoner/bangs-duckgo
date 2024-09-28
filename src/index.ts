@@ -1,4 +1,7 @@
 import type { Bang, RawBang } from './types';
+import bangs from './bangs.json';
+
+export { bangs };
 
 export function bangFrom(raw: RawBang): Bang {
   return {
