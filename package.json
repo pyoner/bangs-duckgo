@@ -5,10 +5,10 @@
   "description": "A library to work with DuckDuckGo bangs that provides utilities.",
   "scripts": {
     "build": "tsup",
-    "format": "prettier --write .",
-    "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
+    "check-format": "prettier --check .",
     "fetch": "bun run src/fetch.ts",
+    "format": "prettier --write .",
     "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
   },
   "main": "./dist/index.js",
