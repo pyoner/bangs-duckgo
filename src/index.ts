@@ -17,3 +17,16 @@ export function* bangsFrom(raws: RawBang[]): Generator<Bang> {
     yield bangFrom(raw);
   }
 }
+
+export const RE_BANG = /^\s*\!(\w+)(?:\s+|$)(.*)/;
+export function parseBang(
+  s: string,
+): { bang: string; query: string } | undefined {
+  const m = RE_BANG.exec(s);
+  if (!m) {
+    return;
+  }
+
+  const [_, bang, query] = m;
+  return { bang, query };
+}
