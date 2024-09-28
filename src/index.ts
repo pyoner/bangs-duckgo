@@ -11,3 +11,9 @@ export function bangFrom(raw: RawBang): Bang {
     subcategory: raw.sc,
   };
 }
+
+export function* bangsFrom(raws: RawBang[]): Generator<Bang> {
+  for (const raw of raws) {
+    yield bangFrom(raw);
+  }
+}
