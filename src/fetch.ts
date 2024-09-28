@@ -1,7 +1,7 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
 
-const url = "https://duckduckgo.com/bang.js";
+const url = 'https://duckduckgo.com/bang.js';
 
 function saveAsJSON(filename: string, data: any) {
   const content = JSON.stringify(data, null, 2);
@@ -12,7 +12,7 @@ function saveAsJSON(filename: string, data: any) {
 async function fetchAndSaveBangs() {
   const response = await fetch(url);
   const json = await response.json();
-  const filename = path.resolve(__dirname, "bangs.json");
+  const filename = path.resolve(__dirname, 'bangs.json');
   saveAsJSON(filename, json);
 }
 
