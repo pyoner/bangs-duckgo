@@ -4,8 +4,9 @@
   "name": "bangs-duckgo",
   "description": "A library to work with DuckDuckGo bangs that provides utilities.",
   "scripts": {
-    "format": "prettier --write src/",
-    "check-format": "prettier --check src/",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack .",
     "fetch": "bun run src/fetch.ts",
     "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
   },
@@ -36,6 +37,7 @@
     "url": "git+https://github.com/pyoner/bangs-duckgo.git"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
     "@types/bun": "latest",
     "prettier": "^3.3.3",
     "quicktype": "^23.0.170",
