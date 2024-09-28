@@ -2,7 +2,7 @@
   "type": "module",
   "version": "1.0.0",
   "name": "bangs-duckgo",
-  "description": "A library to work with DuckDuckGo bangs that provides utilities.",
+  "description": "A library designed to work with DuckDuckGo bangs. It provides utilities to handle, parse, and work with these bangs in JavaScript or TypeScript environments.",
   "scripts": {
     "build": "tsup",
     "check-exports": "attw --pack .",
