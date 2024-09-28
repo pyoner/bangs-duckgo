@@ -17,6 +17,22 @@
       "import": "./src/bangs.json"
     }
   },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "duckduckgo",
+    "bangs"
+  ],
+  "homepage": "https://github.com/pyoner/bangs-duckgo",
+  "bugs": {
+    "url": "https://github.com/pyoner/bangs-duckgo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyoner/bangs-duckgo.git"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "quicktype": "^23.0.170"
