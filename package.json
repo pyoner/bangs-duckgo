@@ -11,10 +11,12 @@
     }
   },
   "scripts": {
-    "fetch": "bun run src/fetch.ts"
+    "fetch": "bun run src/fetch.ts",
+    "types": "bunx quicktype -t Bang --readonly --prefer-unions --prefer-types --just-types -s json -o src/gen-types.ts src/bangs.json"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "quicktype": "^23.0.170"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

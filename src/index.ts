@@ -1,1 +1,2 @@
-console.log("Hello via Bun!");
+import bangs from "./bangs.json";
+export type RawBang = (typeof bangs)[number];
