@@ -1,4 +1,4 @@
-export type Bang = {
+export type RawBang = {
     readonly c?:  C;
     readonly d:   string;
     readonly r:   number;
