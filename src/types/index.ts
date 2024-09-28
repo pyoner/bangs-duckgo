@@ -1,6 +1,6 @@
-import type { RawBang } from "./gen-types";
+import type { RawBang } from "./gen";
 
-export type { RawBang } from "./gen-types";
+export type { RawBang } from "./gen";
 
 export type Bang = {
   readonly url: RawBang["u"];
