@@ -158,6 +158,7 @@ console.log(url);
 ```
 
 ### rankedBangs(bangs: Bang[]): Bang[]
+
 ### rankedBangs(bangs: RawBang[]): RawBang[]
 
 Sorts bangs based on their ratings in descending order.
