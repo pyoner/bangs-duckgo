@@ -2,6 +2,14 @@
   "name": "bangs-duckgo",
   "module": "src/index.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    },
+    "./bangs.json": {
+      "import": "./src/bangs.json"
+    }
+  },
   "scripts": {
     "fetch": "bun run src/fetch.ts"
   },

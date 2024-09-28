@@ -8,6 +8,7 @@ function saveAsJSON(filename: string, data: any) {
   fs.writeFileSync(filename, content);
   console.log(`Data saved to ${filename}`);
 }
+
 async function fetchAndSaveBangs() {
   const response = await fetch(url);
   const json = await response.json();
