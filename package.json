@@ -5,6 +5,7 @@
   "description": "A library to work with DuckDuckGo bangs that provides utilities.",
   "scripts": {
     "format": "prettier --write src/",
+    "check-format": "prettier --check src/",
     "fetch": "bun run src/fetch.ts",
     "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
   },
