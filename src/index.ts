@@ -30,3 +30,8 @@ export function parseBang(
   const [_, bang, query] = m;
   return { bang, query };
 }
+
+export function bangURL(item: RawBang | Bang, query: string): string {
+  const url = "url" in item ? item.url : item.u;
+  return url.replace("{{{s}}}", encodeURIComponent(query));
+}
