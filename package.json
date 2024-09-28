@@ -12,7 +12,7 @@
   },
   "scripts": {
     "fetch": "bun run src/fetch.ts",
-    "types": "bunx quicktype -t RawBang --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
+    "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
   },
   "devDependencies": {
     "@types/bun": "latest",

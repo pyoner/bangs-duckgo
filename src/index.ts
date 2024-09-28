@@ -35,3 +35,15 @@ export function bangURL(item: RawBang | Bang, query: string): string {
   const url = "url" in item ? item.url : item.u;
   return url.replace("{{{s}}}", encodeURIComponent(query));
 }
+
+export function rankedBangs(bangs: Bang[]): Bang[];
+export function rankedBangs(bangs: RawBang[]): RawBang[];
+export function rankedBangs(
+  bangs: Array<Bang | RawBang>,
+): Array<Bang | RawBang> {
+  return bangs.sort((a, b) => {
+    const ratingA = "rating" in a ? a.rating : a.r;
+    const ratingB = "rating" in b ? b.rating : b.r;
+    return ratingB - ratingA;
+  });
+}

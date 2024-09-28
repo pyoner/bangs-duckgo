@@ -1,6 +1,6 @@
-import type { RawBang } from "./gen";
+import type { Raw } from "./gen";
 
-export type { RawBang } from "./gen";
+export type RawBang = Omit<Raw, "c"> & { c?: Raw["c"] | (string & {}) };
 
 export type Bang = {
   readonly url: RawBang["u"];
