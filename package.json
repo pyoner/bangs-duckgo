@@ -4,6 +4,7 @@
   "name": "bangs-duckgo",
   "description": "A library to work with DuckDuckGo bangs that provides utilities.",
   "scripts": {
+    "build": "tsup",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
