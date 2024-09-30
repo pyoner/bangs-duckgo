@@ -40,21 +40,22 @@ bun add bangs-duckgo
 Below is a basic example of how you can use this library:
 
 ```typescript
-import { bangs, bangFrom, parseBang, bangURL, rankedBangs } from 'bangs-duckgo';
+import bangs from 'bangs-duckgo/bangs.json';
+
+import { parseBang, bangURL, rankedBangs } from 'bangs-duckgo';
 
 // Get all bangs
 console.log(bangs);
 
-// Convert raw bang to a formatted bang
-const formattedBang = bangFrom(bangs[0]);
-console.log(formattedBang);
+const bang = bangs[0];
+console.log(bang);
 
 // Parse a string to get bang and query
 const parsed = parseBang('!g search query');
 console.log(parsed);
 
 // Get the URL associated with a bang
-const url = bangURL(formattedBang, 'search query');
+const url = bangURL(bang, 'search query');
 console.log(url);
 
 // Get ranked bangs
@@ -84,7 +85,7 @@ export type RawBang = Omit<Raw, 'c'> & { c?: Raw['c'] | (string & {}) };
 export type Bang = {
   readonly url: RawBang['u'];
   readonly bang: RawBang['t'];
-  readonly site: RawBang['s'];
+  readonly siteName: RawBang['s'];
   readonly domain: RawBang['d'];
   readonly rating: RawBang['r'];
   readonly category?: RawBang['c'];
@@ -92,12 +93,14 @@ export type Bang = {
 };
 ```
 
-### bangs
-
-An array of `RawBang` objects fetched from the `bangs.json` file.
+### import bangs
 
 ```typescript
-export const bangs: RawBang[] = bangsJson;
+// use this import if you prefer raw bangs
+import rawBangs from 'bangs-duckgo/raw-bangs.json';
+
+// otherwise
+import bangs from 'bangs-duckgo/bangs.json';
 ```
 
 ### bangFrom(raw: RawBang): Bang
