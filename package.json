@@ -7,7 +7,7 @@
     "build": "tsup",
     "check-exports": "attw --pack .",
     "check-format": "prettier --check .",
-    "fetch": "bun run src/fetch.ts",
+    "fetch": "bun run scripts/fetch.ts",
     "format": "prettier --write .",
     "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts files/raw-bangs.json"
   },
