@@ -5,7 +5,7 @@
   "description": "A library designed to work with DuckDuckGo bangs. It provides utilities to handle, parse, and work with these bangs in JavaScript or TypeScript environments.",
   "scripts": {
     "bangs": "bun run scripts/bangs.ts",
-    "build": "tsup",
+    "build": "tsup && cp files/*.json dist",
     "check-exports": "attw --pack .",
     "check-format": "prettier --check .",
     "fetch": "bun run scripts/fetch.ts",

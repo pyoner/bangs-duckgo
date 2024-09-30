@@ -1,7 +1,4 @@
 import type { Bang, RawBang } from './types';
-import bangsJson from './bangs.json';
-
-export const rawBangs: RawBang[] = bangsJson;
 
 export function bangFrom(raw: RawBang): Bang {
   return {
