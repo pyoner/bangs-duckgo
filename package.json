@@ -9,7 +9,7 @@
     "check-format": "prettier --check .",
     "fetch": "bun run src/fetch.ts",
     "format": "prettier --write .",
-    "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts src/bangs.json"
+    "types": "bunx quicktype -t Raw --readonly --prefer-unions --prefer-types --just-types -s json -o src/types/gen.ts files/raw-bangs.json"
   },
   "main": "./dist/index.js",
   "exports": {

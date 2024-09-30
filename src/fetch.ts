@@ -12,7 +12,7 @@ function saveAsJSON(filename: string, data: any) {
 async function fetchAndSaveBangs() {
   const response = await fetch(url);
   const json = await response.json();
-  const filename = path.resolve(__dirname, 'bangs.json');
+  const filename = path.resolve('files', 'raw-bangs.json');
   saveAsJSON(filename, json);
 }
 
