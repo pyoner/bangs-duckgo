@@ -1,13 +1,13 @@
 import type { Bang, RawBang } from './types';
 import bangsJson from './bangs.json';
 
-export const bangs: RawBang[] = bangsJson;
+export const rawBangs: RawBang[] = bangsJson;
 
 export function bangFrom(raw: RawBang): Bang {
   return {
     url: raw.u,
     bang: raw.t,
-    site: raw.s,
+    siteName: raw.s,
     domain: raw.d,
     rating: raw.r,
     category: raw.c,
