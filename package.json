@@ -14,7 +14,6 @@
   },
   "main": "./dist/index.js",
   "exports": {
-    "./package.json": "./package.json",
     "./bangs.json": "./dist/bangs.json",
     "./raw-bangs.json": "./dist/raw-bangs.json",
     ".": {
