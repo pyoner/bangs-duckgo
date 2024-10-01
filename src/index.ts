@@ -4,7 +4,7 @@ export function bangFrom(raw: RawBang): Bang {
   return {
     url: raw.u,
     bang: raw.t,
-    siteName: raw.s,
+    name: raw.s,
     domain: raw.d,
     rating: raw.r,
     category: raw.c,

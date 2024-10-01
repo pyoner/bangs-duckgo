@@ -5,7 +5,7 @@ export type RawBang = Omit<Raw, 'c'> & { c?: Raw['c'] | (string & {}) };
 export type Bang = {
   readonly url: RawBang['u'];
   readonly bang: RawBang['t'];
-  readonly siteName: RawBang['s'];
+  readonly name: RawBang['s'];
   readonly domain: RawBang['d'];
   readonly rating: RawBang['r'];
   readonly category?: RawBang['c'];
