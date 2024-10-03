@@ -1,4 +1,5 @@
 import type { Bang, RawBang } from './types';
+export type { Bang, RawBang } from './types';
 
 export function bangFrom(raw: RawBang): Bang {
   return {

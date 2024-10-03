@@ -72,9 +72,7 @@ console.log(ranked);
 `RawBang` is a type that represents a raw bang object, typically as fetched from the `bangs.json` file.
 
 ```typescript
-import type { Raw } from './gen';
-
-export type RawBang = Omit<Raw, 'c'> & { c?: Raw['c'] | (string & {}) };
+import type { Raw } from 'bangs-duckgo';
 ```
 
 #### Bang
@@ -82,15 +80,7 @@ export type RawBang = Omit<Raw, 'c'> & { c?: Raw['c'] | (string & {}) };
 `Bang` is a type that represents a formatted bang object.
 
 ```typescript
-export type Bang = {
-  readonly url: RawBang['u'];
-  readonly bang: RawBang['t'];
-  readonly name: RawBang['s'];
-  readonly domain: RawBang['d'];
-  readonly rating: RawBang['r'];
-  readonly category?: RawBang['c'];
-  readonly subcategory?: RawBang['sc'];
-};
+import type { Bang } from 'bangs-duckgo';
 ```
 
 ### import bangs
